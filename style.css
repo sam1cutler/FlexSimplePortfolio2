@@ -1,0 +1,121 @@
+/* Set ALL HTML elements to have border-box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* main body styles */
+header, footer {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  color: gainsboro;
+  background-color: rgb(47, 64, 79);
+}
+
+h1 {
+  font-size: 72px;
+}
+
+main {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(47, 64, 79);
+  background-color: gainsboro;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 36px;
+}
+
+main p {
+  text-align: left;
+  font-size: 18px;
+}
+
+.item p {
+  text-align: left;
+  font-size: 18px;
+}
+
+ol, ul {
+  text-align: left;
+  font-size: 18px;
+}
+
+.stronger-list-item {
+  font-size: 20px;
+  font-style: bold;
+  text-decoration: underline;
+}
+
+/* keep text-containing elements in the middle of the web page */
+.pageContainer {
+  margin: 0px;
+  padding: 20px 10%;
+}
+
+/* don't want any top/bottom margin between the header/main/footer transitions */
+.majorSections {
+  margin: 0;
+}
+
+hr {
+  background-color: rgb(47, 64, 79);
+  height: 2px;
+  border: 1px solid rgb(47, 64, 79);
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.small-img {
+  margin: 10px;
+  width: 100%;
+}
+
+.small-img-alt {
+  margin: 10px;
+  width: 80%;
+  /*object-fit: cover;*/
+}
+
+
+.img-caption {
+  text-align: center;
+  margin-top: 0px;
+}
+
+/* defining pseudo-classes */
+a:link    { color: blue;}
+a:visited { color: mediumslateblue;}
+a:hover   { color: cornflowerblue;}
+a:active  { color: deepskyblue;}
+
+/* Groups & Items  (Mobile First/"Default") */
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+/* Groups & Items  (Desktop) */
+
+@media all and (min-width: 600px) {
+  section {
+    padding: 0 10%;
+  }
+
+  .group {
+    flex-direction: row;
+  }
+}
